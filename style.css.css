@@ -1,0 +1,171 @@
+/* 1. Google Font Import (Roboto as recommended in instructions) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Basic Color Palette */
+:root {
+    --primary-color: #007bff; /* Blue for headers, links, buttons */
+    --secondary-color: #f8f9fa; /* Light background for sections */
+    --text-color: #343a40; /* Dark gray for text */
+    --separator-color: #ced4da; /* Light gray for dividers */
+    --border-color: #adb5bd;
+}
+
+/* 2. Global/Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* Very light overall background */
+}
+
+/* 3. Layout and Spacing (Box Model) */
+main {
+    max-width: 900px;
+    margin: 20px auto; /* Centers the content block */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adds a shadow around the main content */
+}
+
+section {
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* 4. Navigation Styling (Sticky Nav & Links) */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 0;
+    position: sticky; /* Positioning: Sticky navigation bar */
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    color: white;
+    margin-bottom: 5px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Removes underline */
+    font-weight: bold;
+    padding: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover { /* Hover effect */
+    background-color: #0056b3; 
+    border-radius: 4px;
+}
+
+/* 5. Image Styling (Visual Elements) */
+.profile-img {
+    display: block;
+    margin: 15px auto;
+    border-radius: 50%; /* Makes the image circular */
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a box shadow */
+    transition: transform 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* 6. Skills Table Styling */
+table {
+    width: 80%;
+    margin: 20px auto; /* Centers the table */
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    border: 1px solid var(--border-color); /* Table borders */
+    padding: 10px;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Alternating Row Color */
+tbody tr:nth-child(even) {
+    background-color: var(--secondary-color); /* Light gray for even rows */
+}
+
+/* 7. Form and Button Styling */
+form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--separator-color);
+    border-radius: 8px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't widen the element */
+}
+
+/* Styling the Button */
+.submit-btn {
+    background-color: var(--primary-color); /* Background color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Border-radius */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.submit-btn:hover { /* Hover effect */
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+/* 8. Visual Separator Styling */
+.separator {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--separator-color), rgba(0, 0, 0, 0));
+    margin: 20px 0;
+}
+
+/* 9. Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: var(--text-color);
+    color: white;
+    font-size: 0.9em;
+}
